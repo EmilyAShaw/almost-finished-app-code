@@ -50,17 +50,18 @@
     </script>
     -->
 
-    <h1 id="Google"></h1>
+   
+  
+<!--<h1 id="Google"></h1>-->
  <div id = "Login">  
     <button id="GoogleButton" class = "button button2" onclick="googleLogin()">
       Login with Google  
 </button>
     </button>
 
-    <h1 id="Name"></h1>
+   
+    
 
-<div class= "hideform" style = "display: none">
-    <input id= "update" onchange="updatePost(event)" placeholder="Change data here..."></div>
 
 
 
@@ -108,17 +109,38 @@
     </div>
 
 
-     <div class="footer" id = "footer" style = "display: block">
+     <div class="footer" id = "footer" style = "display: block" >
 <button class="collapsible"><img src="images/upArrow.png" alt="logo" style="width:11%;height:11%;"></button>
 <div class="content">
 
- <a href="profile.html"> <p>Profile</p></a> 
+ <!--<a href="profile.html"> <p>Profile</p></a> -->
 
-
- <button class = "button3" onclick="myFunction()"><p>Create Event</p></button>
+<button class = "button3" onclick="rspv()"><p>RSPV</p></button>
+ <button class = "button3" onclick="createEventDropDown()"><p>Create Event</p></button>
+ <button class = "button3" onclick="profileDropDown()"><p>Profile</p></button>
   
 <!--<button class = "button button2" onClick="window.location.reload()">logout</button>-->
 
+<div id = "rspvDIV" style = "display: none">
+  <div id="EventListForm">
+      <select id="SelectEvents">
+        <option>Choose an Event</option>
+      </select>
+        <button id="proceed" class = "button button2" onclick= "addEventToUser()"> I'm Going </button>
+    </div>
+
+</div>
+<div id = "profileDIV" style = "display: none">
+<!-- profile stuff here-->
+   
+   <h2 id="Google"></h2>
+
+<h1 id="Name"></h1>
+
+<div class= "hideform" style = "display: none">
+    <input id= "update" onchange="updatePost(event)" placeholder="Change data here..."></div>
+
+</div>
 
  <div id="myDIV">
  <div class = "hide/showEvents">
@@ -151,9 +173,30 @@
 
 
 
+
+
+
+
 <script>
-function myFunction() {
+function createEventDropDown() {
     var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function rspv() {
+    var x = document.getElementById("rspvDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+function profileDropDown() {
+    var x = document.getElementById("profileDIV");
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
