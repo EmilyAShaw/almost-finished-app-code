@@ -22,6 +22,7 @@
     
   </head>
   <body>
+    <div class = "shift">
    
 <div class = "hideLogo" id = "hideLogo">
 
@@ -95,7 +96,7 @@
       <button id="proceed" onclick= "addFriendDocument()"> Submit </button>-->
     </div>
 
-    
+    </div>
 
     <!--<div id="EventListForm">
       <select id="SelectEvents">
@@ -125,17 +126,20 @@
   <div id = "singleForm">
   <div id="Controls" style="display: none">
       <p> Press "Geocode" to drag marker to event location:</p> <input id="address" type="textbox" value="Wellington">
-
+<div id = "singleForm">
 
       <input type="button" class = "button button2" value="Geocode" onClick="codeAddress()">
+    </div>
   
   </div>
   <div id = "singleForm">
     <div id="addEventLocation" style="display: none">
-    <input type="text" placeholder="Enter Event Name here..." id = "EventNameMap">
-    <input type="text" placeholder="Enter Event Description here..." id = "eventDescription">
-    <input type="text" placeholder="Enter Time and Date here..." id = "eventTime">
+    <input type="text" placeholder="Event Name here..." id = "EventNameMap">
+    <input type="text" placeholder="Event Description here..." id = "eventDescription">
+    <input type="text" placeholder="Time and Date here..." id = "eventTime" class = "w3-border-0">
+    <div id = "singleForm">
     <button id="proceed" class = "button button2" onclick= "addEventMapDocument()"> Submit </button> 
+  </div>
        <div id="current" style="background-color:white;"> </div>
     </div>
       <div id = "singleForm">
