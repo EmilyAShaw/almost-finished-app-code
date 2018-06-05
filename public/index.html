@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+     <link type="text/css" rel="stylesheet" href="crowd.css" />
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.0.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.0.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.0.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.0.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.0.3/firebase-storage.js"></script>
+    <script defer src="/__/firebase/5.0.3/firebase-firestore.js"></script>
+
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <script src="app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvqPIexINse3p7E2H5eBMh_nldsVU18JM"></script>
+    
+  </head>
+  <body>
+   
+<div class = "hideLogo" id = "hideLogo">
+
+    <div id ="logo"><img src="images/logo.png" alt="logo" style = "padding-top: 15%;"></div>
+      <div id ="find">
+            <p> Find events, Find your friends,
+            <br>
+            Find your crowd </p>
+        </div>
+
+  
+</div>
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB0JxQYW_0TesLorBMxHX_RmDY8tOFo1iQ",
+        authDomain: "app-database-38194.firebaseapp.com",
+        databaseURL: "https://app-database-38194.firebaseio.com",
+        projectId: "app-database-38194",
+        storageBucket: "app-database-38194.appspot.com",
+        messagingSenderId: "1018787389364"
+      };
+      firebase.initializeApp(config);
+
+    </script>
+    -->
+
+    <h1 id="Google"></h1>
+ <div id = "Login">  
+    <button id="GoogleButton" class = "button button2" onclick="googleLogin()">
+      Login with Google  
+</button>
+    </button>
+
+    <h1 id="Name"></h1>
+
+<div class= "hideform" style = "display: none">
+    <input id= "update" onchange="updatePost(event)" placeholder="Change data here..."></div>
+
+
+
+    <div class = "UserForm" id = "UserForm">
+      <div id ="singleForm">
+      <input type="text" placeholder="Enter Name here..." id = "UserName">
+    </div>
+    <div id ="singleForm">
+      <input type="password" placeholder="Enter Password here..." id = "Password">
+    </div>
+    <div id ="singleForm">
+      <input type="text" placeholder="Enter Email here..." id = "UserEmail">
+    </div>
+    <div id ="singleForm">
+      <button id="proceed" class="button button2" onclick= "addUserDocument(true)"> Create </button>
+      <button id="proceed"class="button button2" onclick= "addUserDocument(false)"> Sign In </button>
+</div>
+    </div>
+
+   <div class = "EventForm" id = "EventForm"> <!--
+      <h3>New Event document</h3>
+      <input type="text" placeholder="Enter Event ID here..." id = "EventID">
+      <input type="text" placeholder="Enter Event Name here..." id = "EventName">
+      <input type="text" placeholder="Enter Event Location here..." id = "EventLocation">
+      <button id="proceed" onclick= "addEventDocument()"> Submit </button>-->
+    </div>
+
+    <div class = "FriendForm" id = "FriendForm" style="display: none">
+      <!--<h3>New Friend document</h3>
+      <input type="text" placeholder="Enter your Friend's Name here..." id = "FriendName">
+      <input type="text" placeholder="Enter Friend's email here..." id = "FriendEmail">
+      <button id="proceed" onclick= "addFriendDocument()"> Submit </button>-->
+    </div>
+
+    
+
+    <!--<div id="EventListForm">
+      <select id="SelectEvents">
+        <option>Choose an Event</option>
+      </select>
+        <button id="proceed" onclick= "addEventToUser()"> RSVP to </button>
+    </div>-->
+
+    <div id="map" >
+    </div>
+
+
+     <div class="footer" id = "footer" style = "display: block">
+<button class="collapsible"><img src="images/upArrow.png" alt="logo" style="width:11%;height:11%;"></button>
+<div class="content">
+
+ <a href="profile.html"> <p>Profile</p></a> 
+
+
+ <button class = "button3" onclick="myFunction()"><p>Create Event</p></button>
+  
+<!--<button class = "button button2" onClick="window.location.reload()">logout</button>-->
+
+
+ <div id="myDIV">
+ <div class = "hide/showEvents">
+  <div id = "singleForm">
+  <div id="Controls" style="display: none">
+      <p> Press "Geocode" to drag marker to event location:</p> <input id="address" type="textbox" value="Wellington">
+
+
+      <input type="button" class = "button button2" value="Geocode" onClick="codeAddress()">
+  
+  </div>
+  <div id = "singleForm">
+    <div id="addEventLocation" style="display: none">
+    <input type="text" placeholder="Enter Event Name here..." id = "EventNameMap">
+    <input type="text" placeholder="Enter Event Description here..." id = "eventDescription">
+    <input type="text" placeholder="Enter Time and Date here..." id = "eventTime">
+    <button id="proceed" class = "button button2" onclick= "addEventMapDocument()"> Submit </button> 
+       <div id="current" style="background-color:white;"> </div>
+    </div>
+      <div id = "singleForm">
+      <div id="info" style="background-color:white;"> </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+ 
+
+ 
+
+
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
+</script>
+</div> 
+
+
+  </body>
+
+</html>

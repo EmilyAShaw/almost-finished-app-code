@@ -1,0 +1,250 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: rgba(214, 0, 0, 0.85);
+    z-index: 10;
+    -webkit-backdrop-filter: blur(25px);
+    transition: 0.2s;
+}
+
+header h3 {
+    color: white;
+    font-size: 1.6rem;
+    line-height: 0.1rem;
+    text-align: center;
+}
+
+.hero {
+    height: 70vh;
+    background-image: url(editedTwitterPic.png);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
+
+.scrim {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30vh;
+    top: 10vh;
+    background: linear-gradient(0deg, rgba(25,25,30,0.75) 0%,rgba(35,35,40,0) 100%);
+}
+
+.scrim > h2 {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    font-weight: 100;
+    color: white;
+    font-size: 3rem;
+    text-shadow: 0 5px 15px rgba(25,25,25,0.9);
+}
+
+.body-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: 1.8rem;
+    text-align: left;
+}
+.body-Section >h5{
+    margin-bottom: 0px;
+}
+
+.body-flex {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.body-flex > div, .body-flex > a {
+ 
+    min-width: 300px;
+    flex-grow: 1;
+    border-style: solid;
+    border-color: rgb(214, 0, 0);
+    height: 350px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(255,255,255);
+    box-shadow: 0px 3px 25px -5px rgba(25,35,25,0);
+    transition: 0.2s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.body-flex > div:nth-of-type(2) {
+    background-color: rgb(180,230,250);
+
+}
+
+.body-flex > div:nth-of-type(3) {
+    box-shadow: inset 0 0px 0 0 rgb(120,0,255);
+}
+
+.example-1{
+    background-image: url(MediaExample.jpeg);
+    /*https://qz.com/1039910/how-facebooks-news-feed-algorithm-sells-our-fear-and-outrage-for-profit/*/
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.example-1 > h6{
+    display: inline;
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    line-height: 1.3rem;
+    text-decoration: underline;
+}
+.example-2{
+    background-image: url(CambridgeAnalytica.png);
+    /*Source: https://cambridgeanalytica.org/*/
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.example-2 > h6{
+    display: inline;
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    line-height: 1.3rem;
+    text-decoration: underline;
+}
+
+.example-3{
+    background-image: url(brainAttentionEconomy.jpg);
+    /*Source:http://humanetech.com/problem/*/
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.example-3 > h6{
+    display: inline;
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    line-height: 1.3rem;
+    text-decoration: underline;
+}
+
+.example-4{
+    background-image: url(EchoChamber.png);
+    /*Source:http://affinitymagazine.us/2017/01/30/beware-the-echo-chamber/*/
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.example-4 > h6{
+    display: inline;
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    line-height: 1.3rem;
+    text-decoration: underline;
+}
+
+
+.example-5{
+    position:relative;
+    padding-bottom:56.25%;
+    padding-top:30px;
+    height:0;
+    overflow:hidden;
+}
+
+.example-5 iframe, .example-5 object, .example-5 embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+.example-6{
+    position:relative;
+    padding-bottom:56.25%;
+    padding-top:30px;
+    height:0;
+    overflow:hidden;
+}
+
+.example-6 iframe, .example-5 object, .example-5 embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+footer {
+    position: absolute;
+    margin-top: 100px;
+    left: 0;
+    right: 0;
+    height: 80px;
+    overflow: hidden;
+    color: rgb(255,255,255);
+    border-top: solid 1px rgb(0,0,0);
+    background-color: rgba(214, 0, 0, 0.85);
+}
+
+footer h5 {
+    margin-left: 10%;
+}
+
+@media(max-width: 850px) {
+    html {
+        font-size: 14px;
+    }
+
+    header {
+        background-color: rgba(240,240,240,0.85);
+        border-bottom: solid 1px rgba(180,180,180,0.25);
+    }
+
+    header h3 {
+        line-height: 0.5rem;
+        color: rgba(0,0,0,0.75);
+    }
+
+
+}
+
+@media(hover: hover) {
+    .body-flex > a:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 25px -10px rgba(25,35,25,0.1);
+    }
+}

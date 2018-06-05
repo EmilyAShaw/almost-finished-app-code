@@ -1,0 +1,144 @@
+[debug] [2018-06-04T02:17:29.926Z] ----------------------------------------------------------------------
+[debug] [2018-06-04T02:17:29.930Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-06-04T02:17:29.930Z] CLI Version:   3.18.5
+[debug] [2018-06-04T02:17:29.930Z] Platform:      darwin
+[debug] [2018-06-04T02:17:29.930Z] Node Version:  v6.11.4
+[debug] [2018-06-04T02:17:29.931Z] Time:          Mon Jun 04 2018 14:17:29 GMT+1200 (NZST)
+[debug] [2018-06-04T02:17:29.931Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-04T02:17:29.952Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-04T02:17:29.952Z] > authorizing via signed-in user
+[debug] [2018-06-04T02:17:29.955Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/app-database-38194  
+  
+ Mon Jun 04 2018 14:17:29 GMT+1200 (NZST)
+[debug] [2018-06-04T02:17:31.157Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T02:17:31.159Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/app-database-38194/tokens  
+  
+ Mon Jun 04 2018 14:17:31 GMT+1200 (NZST)
+[debug] [2018-06-04T02:17:32.022Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T02:17:32.023Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/app-database-38194  
+  
+ Mon Jun 04 2018 14:17:32 GMT+1200 (NZST)
+[debug] [2018-06-04T02:17:33.470Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/Emily/Desktop/glooooom'...
+[info] 
+[debug] [2018-06-04T02:17:33.472Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1018787389364/clients/_:getWebAppConfig  
+  
+ Mon Jun 04 2018 14:17:33 GMT+1200 (NZST)
+[debug] [2018-06-04T02:17:38.075Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2018-06-04T03:56:49.834Z] ----------------------------------------------------------------------
+[debug] [2018-06-04T03:56:49.838Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-06-04T03:56:49.839Z] CLI Version:   3.18.5
+[debug] [2018-06-04T03:56:49.839Z] Platform:      darwin
+[debug] [2018-06-04T03:56:49.839Z] Node Version:  v6.11.4
+[debug] [2018-06-04T03:56:49.840Z] Time:          Mon Jun 04 2018 15:56:49 GMT+1200 (NZST)
+[debug] [2018-06-04T03:56:49.840Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-04T03:56:49.891Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-04T03:56:49.892Z] > authorizing via signed-in user
+[debug] [2018-06-04T03:56:49.895Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-06-04T03:56:49.895Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/iQ105UQHMkiAWmoRkIK80gnq41ftb8jedLNDJTJHQP4',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Jun 04 2018 15:56:49 GMT+1200 (NZST)
+[debug] [2018-06-04T03:56:50.431Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T03:56:50.450Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/app-database-38194  
+  
+ Mon Jun 04 2018 15:56:50 GMT+1200 (NZST)
+[debug] [2018-06-04T03:56:51.859Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T03:56:51.860Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/app-database-38194/tokens  
+  
+ Mon Jun 04 2018 15:56:51 GMT+1200 (NZST)
+[debug] [2018-06-04T03:56:52.669Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T03:56:52.670Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/app-database-38194  
+  
+ Mon Jun 04 2018 15:56:52 GMT+1200 (NZST)
+[debug] [2018-06-04T03:56:54.242Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/Emily/Desktop/glooooom'...
+[info] 
+[debug] [2018-06-04T03:56:54.245Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1018787389364/clients/_:getWebAppConfig  
+  
+ Mon Jun 04 2018 15:56:54 GMT+1200 (NZST)
+[debug] [2018-06-04T03:56:55.416Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2018-06-04T23:18:25.594Z] Error: getaddrinfo ENOTFOUND www.gstatic.com www.gstatic.com:443
+    at errnoException (dns.js:28:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-06-04T23:18:25.698Z] Error: getaddrinfo ENOTFOUND www.gstatic.com www.gstatic.com:443
+    at errnoException (dns.js:28:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-06-04T23:18:25.700Z] Error: getaddrinfo ENOTFOUND www.gstatic.com www.gstatic.com:443
+    at errnoException (dns.js:28:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-06-04T23:18:25.704Z] Error: getaddrinfo ENOTFOUND www.gstatic.com www.gstatic.com:443
+    at errnoException (dns.js:28:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-06-04T23:18:25.704Z] Error: getaddrinfo ENOTFOUND www.gstatic.com www.gstatic.com:443
+    at errnoException (dns.js:28:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-06-04T23:18:25.705Z] Error: getaddrinfo ENOTFOUND www.gstatic.com www.gstatic.com:443
+    at errnoException (dns.js:28:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-06-04T23:19:25.228Z] ----------------------------------------------------------------------
+[debug] [2018-06-04T23:19:25.230Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-06-04T23:19:25.231Z] CLI Version:   3.18.5
+[debug] [2018-06-04T23:19:25.231Z] Platform:      darwin
+[debug] [2018-06-04T23:19:25.231Z] Node Version:  v6.11.4
+[debug] [2018-06-04T23:19:25.231Z] Time:          Tue Jun 05 2018 11:19:25 GMT+1200 (NZST)
+[debug] [2018-06-04T23:19:25.231Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-04T23:19:25.264Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-04T23:19:25.264Z] > authorizing via signed-in user
+[debug] [2018-06-04T23:19:25.267Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-06-04T23:19:25.267Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/iQ105UQHMkiAWmoRkIK80gnq41ftb8jedLNDJTJHQP4',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue Jun 05 2018 11:19:25 GMT+1200 (NZST)
+[debug] [2018-06-04T23:19:26.380Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T23:19:26.412Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/app-database-38194  
+  
+ Tue Jun 05 2018 11:19:26 GMT+1200 (NZST)
+[debug] [2018-06-04T23:19:28.472Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T23:19:28.472Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/app-database-38194/tokens  
+  
+ Tue Jun 05 2018 11:19:28 GMT+1200 (NZST)
+[debug] [2018-06-04T23:19:29.424Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T23:19:29.425Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/app-database-38194  
+  
+ Tue Jun 05 2018 11:19:29 GMT+1200 (NZST)
+[debug] [2018-06-04T23:19:31.582Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/Emily/Desktop/glooooom'...
+[info] 
+[debug] [2018-06-04T23:19:31.584Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1018787389364/clients/_:getWebAppConfig  
+  
+ Tue Jun 05 2018 11:19:31 GMT+1200 (NZST)
+[debug] [2018-06-04T23:19:33.449Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+

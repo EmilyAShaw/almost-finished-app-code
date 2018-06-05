@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="crowd.css" />
+    <title>Create Event</title>
+
+    
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.0.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.0.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.0.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.0.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.0.3/firebase-storage.js"></script>
+    <script defer src="/__/firebase/5.0.3/firebase-firestore.js"></script>
+
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <script src="app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvqPIexINse3p7E2H5eBMh_nldsVU18JM"></script>
+    
+  </head>
+    <body>
+       
+       <div id ="backButton"><a href="MainMap.html"><img src="images/backArrowBlue.png" alt="logo" style="width:7%;height:7%;" ></a></div>
+
+               <h1> CREATE EVENT</h1>
+
+            <div id ="HomeButtons">
+
+
+
+
+            <div class = "EventForm" id = "EventForm"> <!--integrated with databse-->
+                
+                 <div id = "SignUp">
+                     
+                     <div id ="singleForm">
+                        <h2>NAME OF EVENT</h2>
+                        <input type="text" placeholder="Enter Event Name here..." id = "EventName">
+                     </div>
+                      <h2>LOCATION</h2>
+                     <div id ="singleForm">
+                    <input type="text" placeholder="Enter Event Location here..." id = "EventLocation">
+                     </div>
+
+
+
+                      <h2>DESCRIPTION</h2>
+                     <div id ="singleForm">
+                        <input type="text" placeholder="Enter Event ID here..." id = "EventID">
+                     <input type="text" placeholder="Description" style = "height:50px;">
+                     </div>
+                     <div id ="submit">
+                     <button class = "button button2" id="proceed" onclick= "addEventDocument()"><a href = "#""></a> Submit </button>
+                     </div>
+                 </div>
+
+        </div>
+            </div>    
+              
+        
+    </body>
+</html>

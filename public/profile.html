@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Crowd</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="coloredBackground.css" />
+         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCf8Ioz_QYIb8FARHlXItYYb1Y9mA1vH_4"></script>
+    </head>
+    <body>
+
+        <div id ="backButton"><a href="index.html"></a><img src="images/backArrowBlue.png" alt="logo" style="width:7%;height:7%;" ></div>
+               
+               <h1> PROFILE</h1>
+
+
+
+           
+
+          <div class="flex-container">  
+            <div id = "name">
+            <p>name</p>
+            <p>21, Wellington</p>
+          </div>   
+                  
+            <div class="profilepic"></div>
+          </div>
+
+                     <div id ="yourevents">
+                     <button class =" button button2" ><a href = "yourevents.html"> Your Events</a> </button>
+                     </div>
+<h3> Current Location</h3>
+          <div id = "profilewhite">
+<div id="map">
+
+    <script>
+      
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 12
+        });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            marker.setPos(pos);
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('You are here.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCf8Ioz_QYIb8FARHlXItYYb1Y9mA1vH_4&callback=initMap">
+    </script>
+     </div>  
+     </div>    
+        
+    </body>
+    <footer>
+       <div class="footer" id = "footer" style = "display: block">
+<button class="collapsible"><img src="images/upArrow.png" alt="logo" style="width:11%;height:11%;"></button>
+<div class="content">
+ 
+ <a href="profile.html"> <p>Profile</p></a>
+ <a href="#"> <p>Friends</p></a>
+<a href="createEvent.html"> <p>Create Event</p></a>
+ <input type="button" value="logout" onClick="window.location.reload()">
+
+  <div class = "hide/showEvents">
+  <div id="Controls" style="display: none">
+      <input id="address" type="textbox" value="Wellington">
+
+      <input type="button" value="Geocode" onClick="codeAddress()">
+      <div id="current" style="background-color:white;">Nothing yet...</div>
+      <div id="info" style="background-color:white;">Address:</div>
+    </div>
+
+    <div id="addEventLocation" style="display: none">
+    <input type="text" placeholder="Enter Event Name here..." id = "EventNameMap">
+    <button id="proceed" onclick= "addEventMapDocument()"> Submit </button>
+    </div>
+</div>
+
+
+
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
+</script>
+</div> 
+
+
+</footer>
+</html>
