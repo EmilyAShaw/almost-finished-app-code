@@ -19,6 +19,17 @@ document.addEventListener("DOMContentLoaded" , event => {
 	const database = firebase.firestore();
   	const settings = {/* your settings... */ timestampsInSnapshots: true};
   	database.settings(settings);
+
+  	firebase.auth().onAuthStateChanged(function(user) {
+	  if (user) {
+	    // User is signed in.
+	    var UserID = user.displayName + "-" + user.email;
+	  } else {
+	    // No user is signed in.
+	    var UserID = "blank";
+	  }
+	  console.log(UserID);
+	});
 	
 
 	const myUser = database.collection('Users').doc('ONE');
@@ -83,7 +94,7 @@ function googleLogin() {
 			var ThisUser = database.collection('Users').doc(String(UserID));
 			ThisUser.onSnapshot(doc =>{
 				const data = doc.data();
-				document.querySelector( "#Google" ).innerHTML = ("Welcome, " + data.name);
+				document.querySelector( "#Google" ).innerHTML = ("Name: " + data.name);
 			})
 
 
@@ -278,24 +289,36 @@ function myMap() {
         querySnapshot.forEach(function(doc) {
             // doc.data() is never undefined for query doc snapshots
             //debug console.log(doc.id, " => ", doc.data());
+            var ContentString = "<p>Event Name: " + doc.data().name + "</p><p>Event Description: "+ doc.data().Description 
+            + "</p><p>Event Location: "+ doc.data().Location._lat + ", " + doc.data().Location._long + "</p><p>Event Time: "+ doc.data().Time + "</p>" 
+            
+            var infowindow = new google.maps.InfoWindow({
+          		content: ContentString
+        	});
             var image = "marker.png"
             var myLatLng = {lat: doc.data().Location._lat, lng: doc.data().Location._long};
+
             var marker = new google.maps.Marker({
 			    map: map,
-
 			    draggable: false,
 			    position: myLatLng,
-			    label: doc.data().name,
+			    label: {text: doc.data().name, color: "white"},
 			    title: doc.data().name,
 			    icon: image
 
-
 			});
+
+			marker.addListener('click', function() {
+          		infowindow.open(map, marker);
+        	});
+
         });
     })
     .catch(function(error) {
         console.log("Error getting documents: ", error);
     });
+
+var im = 'bitmoj.png';
 
     if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
@@ -304,9 +327,13 @@ function myMap() {
               lng: position.coords.longitude
             };
 
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
+            var userMarker = new google.maps.Marker({
+            position: pos,
+            map: map,
+            icon: im
+        });
+
+            
             map.setCenter(pos);
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
