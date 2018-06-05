@@ -22,7 +22,7 @@
     width:390px;
 }
 #map{
-    height:732px;
+    height:600px;
     width:400px;
     text-align:left;
     margin-left: -10px;
@@ -155,7 +155,8 @@ img{
 
 #logo{
    text-align:center;
-   padding-top:5%;
+   margin-top:-20px;
+   margin-right: 10px;
 }
 
 #logo1{
