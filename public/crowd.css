@@ -4,6 +4,10 @@
 }
 
 
+.shift{
+    padding-left: 40px;
+}
+
 #myDIV {
 
     display:none;
@@ -120,12 +124,19 @@ input{
     color: #777;
     font-size: 1.2rem;
     font-family: "Adam";
+    padding-left:5%;
 }
 
 
 #singleForm{
     padding:3%;
    
+}
+.label{
+    font-family: "Adam";
+}
+#label{
+    font-family: "Adam";
 }
 
 .button {
@@ -159,7 +170,8 @@ img{
 #logo{
    text-align:center;
    margin-top:-20px;
-   margin-right: 10px;
+   padding-left:10%;
+  
 }
 
 #logo1{
